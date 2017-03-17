@@ -7,11 +7,13 @@ import {
 const App = (props) => (
   <Router>
     <div>
-      <Route path="/:page?/:subpage?" render={({match}) => (
-        <h1>
-          Page: {match.params.page || 'Home'}<br />
-          Subpage: {match.params.subpage}
-        </h1>
+      <Route
+        path="/:a(\d{2}-\d{2}-\d{4}):b(\.[a-z]+)"
+        render={({match}) => (
+          <h1>
+            param a: {match.params.a}<br />
+            param b: {match.params.b}
+          </h1>
         )} />
     </div>
   </Router>
