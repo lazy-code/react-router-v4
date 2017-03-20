@@ -23,7 +23,9 @@ const App = (props) => (
       <Switch>
         <Route exact path="/" render={() => <h1>Home</h1>} />
         <Route path="/about" render={() => <h1>About</h1>} />
-        <Route render={() => <h1>404 Page not found</h1>} />
+        <Route path="/contact" render={() => <h1>Contact</h1>} />
+        <Route path="/:itemid" render={({match}) => (
+          <p>Item ID: {match.params.itemid}</p>)} />
       </Switch>
     </div>
   </Router>
