@@ -10,3 +10,11 @@ a, a:visited {
 a.active {
     color: #f00;
 }
+
+.header {
+    border: 1px solid #f00;
+}
+
+.content {
+    border: 1px solid #00f;
+}
